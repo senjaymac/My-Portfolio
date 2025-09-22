@@ -1,40 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senon Macatangay | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Senon</a>
+  
+<a href="#main" class="skip-link" tabindex="-1">Skip to main content</a>
 
-        <nav>
-            <a href="#" class="active"> Home</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
-            <a href="#" >Contact</a>
-        </nav>
-    </header>
-    <section class="home">
+<header role="banner">
+  <nav aria-label="Main navigation">
+    <a href="#home" class="active" aria-current="page">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+  <main id="main" role="main">
+
+    <section id="home" class="home" aria-labelledby="intro-heading">
+      <div class="home-wrapper">
         <div class="home-img">
-            <img src="main.png" alt="">
+          <img src="main.png" alt="Portrait of Senon Macatangay" />
         </div>
         <div class="home-content">
-            <h1>Hi, It's <span>Senon</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus labore dolores esse. Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae debitis deleniti blanditiis quibusdam quaerat neque asperiores ea.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <a href="#" class="btn">Hire me</a>
+          <h1 id="intro-heading">Hi, It's <span>Senon Macatangay</span></h1>
+          <h2>
+            I'm a <span class="typing-animation" aria-live="polite">Software Developer</span>
+          </h2>
+          <p>
+            I'm a Computer Engineering graduate passionate about software development,
+            electronics, and problem-solving. I enjoy building applications and
+            exploring innovative technologies that make an impact.
+          </p>
+          <div class="social-icons" role="navigation" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/senon-jayson-macatangay-jr-42604b249/" target="_blank" aria-label="LinkedIn profile">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/senjaymac" target="_blank" aria-label="GitHub profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:youremail@example.com" aria-label="Send email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">My Skills</h2>
+      <ul class="skills-list" role="list">
+        <li>Python</li>
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Electronics & Soldering</li>
+      </ul>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Projects & Experience</h2>
+      <div class="projects" role="list">
+        <article class="project-card" role="listitem">
+          <h3>Mini Shopping API</h3>
+          <p>
+            Spring Boot + JWT secured e-commerce API with role-based access control (RBAC).
+            Allows user authentication, product management, and order tracking.
+          </p>
+        </article>
+        <article class="project-card" role="listitem">
+          <h3>Text-to-Speech App</h3>
+          <p>
+            Java Spring AI app integrating OpenAI’s API for natural voice synthesis.
+            Includes REST endpoints for audio generation.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <p class="connect-text">If you'd like to collaborate or learn more, let’s connect!</p>
+      <form aria-label="Contact form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required aria-required="true" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Senon Macatangay. All rights reserved.</p>
+  </footer>
 </body>
 </html>
